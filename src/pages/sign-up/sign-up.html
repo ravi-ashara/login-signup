@@ -13,7 +13,57 @@
 <ion-content>
     <ion-row>
         <ion-col col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3>
-            <ion-card></ion-card>
+            <ion-card padding>
+                <form [formGroup]="signupForm" (ngSubmit)="signUpFunc(signupForm)">
+                    <ion-item>
+                        <ion-label floating>First name</ion-label>
+                        <ion-input type="text" name="fname" formControlName="fname"></ion-input>
+                    </ion-item>
+                    <div *ngIf="!signupForm.controls['fname'].valid && (signupForm.controls['fname'].dirty || signupForm.controls['fname'].touched)" class="errorMessage">
+                        <div margin-left *ngIf="signupForm.controls['fname'].hasError('required')">
+                            First name is rqeuired
+                        </div>
+                    </div>
+                    <ion-item>
+                        <ion-label floating>Last name</ion-label>
+                        <ion-input type="text" name="lname" formControlName="lname"></ion-input>
+                    </ion-item>
+                    <div *ngIf="!signupForm.controls['lname'].valid && (signupForm.controls['lname'].dirty || signupForm.controls['lname'].touched)" class="errorMessage">
+                        <div margin-left *ngIf="signupForm.controls['lname'].hasError('required')">
+                            Last name is required
+                        </div>
+                    </div>
+                    <ion-item>
+                        <ion-label floating>Email</ion-label>
+                        <ion-input type="email" name="email" formControlName="email"></ion-input>
+                    </ion-item>
+                    <div *ngIf="!signupForm.controls['email'].valid && (signupForm.controls['email'].dirty || signupForm.controls['email'].touched)" class="errorMessage">
+                        <div margin-left *ngIf="signupForm.controls['email'].hasError('required')">
+                            Email is required
+                        </div>
+                        <div margin-left *ngIf="signupForm.controls['email'].hasError('email')">
+                            Enter valid email
+                        </div>
+                    </div>
+                    <ion-item>
+                        <ion-label floating>Password</ion-label>
+                        <ion-input type="password" name="password" formControlName="password"></ion-input>
+                    </ion-item>
+                    <div *ngIf="!signupForm.controls['password'].valid && (signupForm.controls['password'].dirty || signupForm.controls['password'].touched)" class="errorMessage">
+                        <div margin-left *ngIf="signupForm.controls['password'].hasError('required')">
+                            Password is required
+                        </div>
+                        <div margin-left *ngIf="signupForm.controls['password'].hasError('minlength')">
+                            Enter password at least 6 character
+                        </div>
+                    </div>
+                    <div padding-vertical text-center>
+                        <button ion-button [disabled]="!signupForm.valid">
+                          Sing Up
+                        </button>
+                    </div>
+                </form>
+            </ion-card>
         </ion-col>
     </ion-row>
 </ion-content>

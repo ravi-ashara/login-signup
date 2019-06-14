@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 /**
  * Generated class for the SignUpPage page.
@@ -14,12 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'sign-up.html',
 })
 export class SignUpPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public signupForm: FormGroup;
+  constructor(public formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams) {
+    this.signupForm = this.formBuilder.group({
+      fname:['',[Validators.required]],
+      lname:['',[Validators.required]],
+      email:['',[Validators.required,Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SignUpPage');
+  signUpFunc(val: any){
+    console.log(val.value);
   }
 
 }
