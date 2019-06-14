@@ -5,11 +5,51 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Login</ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+    <ion-row>
+        <ion-col col-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3>
+            <ion-card padding>
+                <form [formGroup]="loginForm" (ngSubmit)="loginFunc(loginForm)">
+                    <ion-item>
+                        <ion-label floating>Username</ion-label>
+                        <ion-input type="text" name="username" formControlName="username" autocorrect="off" clearInput="true">
+                        </ion-input>
+                    </ion-item>
+                    <div *ngIf="!loginForm.controls['username'].valid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)" class="errorMessage">
+                        <div margin-left *ngIf="loginForm.controls['username'].hasError('required')">
+                            Please enter username
+                        </div>
+                    </div>
+                    <ion-item>
+                        <ion-label floating>Password</ion-label>
+                        <ion-input type="password" name="password" formControlName="password"></ion-input>
+                    </ion-item>
+                    <div *ngIf="!loginForm.controls['password'].valid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="errorMessage">
+                        <div margin-left *ngIf="loginForm.controls['password'].hasError('required')">
+                            Please enter password
+                        </div>
+                        <div margin-left *ngIf="loginForm.controls['password'].hasError('minlength')">
+                            Enter password at least 6 character
+                        </div>
+                    </div>
+                    <ion-row>
+                        <ion-col text-right col-6>
+                            <button ion-button round [disabled]="!loginForm.valid">Login</button>
+                        </ion-col>
+                        <ion-col text-left col-6>
+                            <button ion-button round (click)="signUpfunc()">Singup</button>
+                        </ion-col>
+                    </ion-row>
+                    <div text-center padding-vertical>
+                        <button ion-button round clear (click)="forgotPasswordfunc()">Forgot password ?</button>
+                    </div>
+                </form>
+            </ion-card>
+        </ion-col>
+    </ion-row>
 </ion-content>
