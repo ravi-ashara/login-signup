@@ -12,7 +12,7 @@ Forms with validation
 ##SCREEN SHOTS
 ```
 
-![Alt text](src/assets/screenshots/Login.png?raw=true "Optional Title")
+![Alt text](https://github.com/ravi-ashara/login-signup/blob/master/src/assets/screenshots/Login.png "Optional Title")
 
 ```
 
