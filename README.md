@@ -12,10 +12,10 @@ Forms with validation
 
 ## SCREEN SHOTS
 
-<img src="src/assets/screenshots/Login.png" width="225"/>&nbsp;
-<img src="src/assets/screenshots/Signup.png" width="225"/>&nbsp;
-<img src="src/assets/screenshots/Forgot-Password.png" width="225"/>&nbsp;
-<img src="src/assets/screenshots/OTP.png" width="225"/>
+<img src="src/assets/screenshots/Login.png" width="210"/>&nbsp;
+<img src="src/assets/screenshots/Signup.png" width="210"/>&nbsp;
+<img src="src/assets/screenshots/Forgot-Password.png" width="210"/>&nbsp;
+<img src="src/assets/screenshots/OTP.png" width="210"/>
 
 ## OPEN PROJECT ON BROWSER
 
