@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 /**
@@ -16,7 +16,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class ForgotPasswordPage {
   public forgotPasswordForm: FormGroup;
-  constructor(public formBuilder: FormBuilder) {
+  constructor(public formBuilder: FormBuilder, public navCtrl: NavController) {
     this.forgotPasswordForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]]
     })
@@ -24,5 +24,6 @@ export class ForgotPasswordPage {
 
   forgotPasswordfunc(val: any) {
     console.log(val.value);
+    this.navCtrl.push('OtpScreenPage',{param: val.value});
   }
 }
