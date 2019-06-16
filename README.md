@@ -11,8 +11,8 @@ Forms with validation
 
 ## SCREEN SHOTS
 
-<img src="src/assets/screenshots/Login.png" width="235"/>&nbsp;
-<img src="src/assets/screenshots/Signup.png" width="235"/>&nbsp;
+<img src="src/assets/screenshots/Login.png" width="225"/>&nbsp;
+<img src="src/assets/screenshots/Signup.png" width="225"/>&nbsp;
 <img src="src/assets/screenshots/Forgot-Password.png" width="235"/>
 
 ## OPEN PROJECT ON BROWSER
