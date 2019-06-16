@@ -1,0 +1,17 @@
+page-otp-screen {
+    ion-input {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        margin: 10px;
+        --padding-start: 0px;
+        border-bottom: 1px solid;
+        color: #000000;
+        padding-left: 10px;
+    }
+    .text-input-md {
+        margin: 14px 2px !important;
+        padding: 0 !important;
+        width: calc(100%) !important;
+    }
+}
