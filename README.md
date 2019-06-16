@@ -11,11 +11,9 @@ Forms with validation
 
 ## SCREEN SHOTS
 
-![Alt text](https://github.com/ravi-ashara/login-signup/blob/master/src/assets/screenshots/Login.png?raw=true "Optional Title")
-
-![Alt text](https://github.com/ravi-ashara/login-signup/blob/master/src/assets/screenshots/Signup.png?raw=true "Optional Title")
-
-![Alt text](https://github.com/ravi-ashara/login-signup/blob/master/src/assets/screenshots/Forgot-Password.png?raw=true "Optional Title")
+<img src="src/assets/screenshots/Login.png" width="235"/>&nbsp;
+<img src="src/assets/screenshots/Signup.png" width="235"/>&nbsp;
+<img src="src/assets/screenshots/Forgot-Password.png" width="235"/>
 
 ## OPEN PROJECT ON BROWSER
 
