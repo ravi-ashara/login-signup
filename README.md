@@ -9,12 +9,13 @@ Forms with validation
 
  [ionic](https://ionicframework.com/docs/v3/intro/installation/)
 
-##SCREEN SHOTS
-```
+## SCREEN SHOTS
 
-![Alt text](https://github.com/ravi-ashara/login-signup/blob/master/src/assets/screenshots/Login.png "Optional Title")
+![Alt text](https://github.com/ravi-ashara/login-signup/blob/master/src/assets/screenshots/Login.png?raw=true "Optional Title")
 
-```
+![Alt text](https://github.com/ravi-ashara/login-signup/blob/master/src/assets/screenshots/Signup.png?raw=true "Optional Title")
+
+![Alt text](https://github.com/ravi-ashara/login-signup/blob/master/src/assets/screenshots/Forgot-Password.png?raw=true "Optional Title")
 
 ## OPEN PROJECT ON BROWSER
 
