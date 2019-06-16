@@ -1,5 +1,7 @@
 {
   "name": "login-signup",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
