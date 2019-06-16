@@ -4,6 +4,7 @@ Forms with validation
 1) Login
 2) Signup
 3) Forgot password
+4) OTP
 
 
 ## INSTALL IONIC USING CLI
