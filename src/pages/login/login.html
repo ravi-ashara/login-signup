@@ -17,10 +17,12 @@
                 <form [formGroup]="loginForm" (ngSubmit)="loginFunc(loginForm)">
                     <ion-item>
                         <ion-label floating>Username</ion-label>
-                        <ion-input type="text" name="username" formControlName="username" autocorrect="off" clearInput="true">
+                        <ion-input type="text" name="username" formControlName="username" autocorrect="off"
+                            clearInput="true">
                         </ion-input>
                     </ion-item>
-                    <div *ngIf="!loginForm.controls['username'].valid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)" class="errorMessage">
+                    <div *ngIf="!loginForm.controls['username'].valid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)"
+                        class="errorMessage">
                         <div margin-left *ngIf="loginForm.controls['username'].hasError('required')">
                             Username is required
                         </div>
@@ -29,7 +31,8 @@
                         <ion-label floating>Password</ion-label>
                         <ion-input type="password" name="password" formControlName="password"></ion-input>
                     </ion-item>
-                    <div *ngIf="!loginForm.controls['password'].valid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="errorMessage">
+                    <div *ngIf="!loginForm.controls['password'].valid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)"
+                        class="errorMessage">
                         <div margin-left *ngIf="loginForm.controls['password'].hasError('required')">
                             Password is required
                         </div>
@@ -38,17 +41,19 @@
                         </div>
                     </div>
                     <ion-row>
-                        <ion-col text-right col-6>
+                        <ion-col text-center col-12>
                             <button ion-button round [disabled]="!loginForm.valid">Login</button>
                         </ion-col>
-                        <ion-col text-left col-6>
-                            <button ion-button round (click)="signUpfunc()">Singup</button>
-                        </ion-col>
                     </ion-row>
-                    <div text-center padding-vertical>
-                        <button ion-button round clear (click)="forgotPasswordfunc()">Forgot password ?</button>
-                    </div>
                 </form>
+                <ion-row>
+                    <ion-col text-center col-12>
+                        <button ion-button round (click)="signUpfunc()">Singup</button>
+                    </ion-col>
+                </ion-row>
+                <div text-center padding-vertical>
+                    <button ion-button round clear (click)="forgotPasswordfunc()">Forgot password ?</button>
+                </div>
             </ion-card>
         </ion-col>
     </ion-row>
